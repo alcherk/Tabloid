@@ -42,6 +42,8 @@
     // you can do so here.
 
     [super viewWillAppear:animated];
+    
+    [UIApplication sharedApplication].statusBarHidden = YES;
 }
 
 - (void)viewDidLoad
