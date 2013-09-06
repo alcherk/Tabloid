@@ -30,10 +30,12 @@
 
     var tabloid = [2, 2, 0, 0, 1, 1, 0, 0],
     	classes = ['tabloid-cell-rest', 'tabloid-cell1', 'tabloid-cell2'],
-    	start_date = new Date('2013-09-05');
+    	start_date = new Date('2013-09-05'),
+    	month_delta = 4;
 
     for (i = 0, last = $date_cells.length; i < last; i++) {
-    	$($date_cells[i]).addClass(classes[tabloid[i % tabloid.length]]);
+    	var tabloid_ind = (i + month_delta) % tabloid.length;
+    	$($date_cells[i]).addClass(classes[tabloid[tabloid_ind]]);
     }
 
 }());

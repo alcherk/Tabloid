@@ -1,13 +1,13 @@
 @charset 'UTF-8';
 
 .tabloid-cell-rest {
-	background-color: green !important;
+	background-color: #2ecc71 !important;
 }
 
 .tabloid-cell1 {
-	background-color: orange !important;
+	background-color: #f1c40f !important;
 }
 
 .tabloid-cell2 {
-	background-color: red;
+	background-color: #e67e22 !important;
 }
