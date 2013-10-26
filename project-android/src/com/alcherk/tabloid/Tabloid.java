@@ -29,8 +29,8 @@ public class Tabloid extends DroidGap
     {
         super.onCreate(savedInstanceState);
         // Set by <content src="index.html" /> in config.xml
-        super.loadUrl(Config.getStartUrl());
-        //super.loadUrl("file:///android_asset/www/index.html")
+        //super.loadUrl(Config.getStartUrl());
+        super.loadUrl("file:///assets/www/src/index.html");
     }
 }
 

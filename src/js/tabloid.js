@@ -1,6 +1,7 @@
 (function () {
-	var tabloid = [2, 2, 0, 0, 1, 1, 0, 0],
-		start_date = new Date('2013-09-05');
+	var tabloid = [1, 1, 0, 0, 2, 2, 0, 0],
+		startDate = new Date(2012, 3, 30),
+		secondsInDay = 60 * 60 * 24;
 
     var $calendar = $( '#calendar' ),
 	    cal = $calendar.calendario( {
@@ -23,10 +24,27 @@
 	        cal.gotoPreviousMonth( updateMonthYear );
 	    } );
 
+	function getSmena(year, month, day) {
+		var curDate = new Date(year, month, day);
+
+			// The number of milliseconds in one day
+		var ONE_DAY = 1000 * 60 * 60 * 24;
+
+		// Convert both dates to milliseconds
+		var date1_ms = curDate.getTime();
+		var date2_ms = startDate.getTime();
+
+		// Calculate the difference in milliseconds
+		var difference_ms = Math.abs(date1_ms - date2_ms);
+
+		// Convert back to days and return
+		return Math.round(difference_ms/ONE_DAY) % tabloid.length;
+	}
+
     function updateMonthYear() {                
         $month.html( cal.getMonthName() );
         $year.html( cal.getYear() );
-        updateTabloid(4);
+        updateTabloid(getSmena(cal.getYear(), cal.getMonth(), 1));
     }
 
     function updateTabloid(delta) {
@@ -41,6 +59,14 @@
     	}
     }
 
-    updateTabloid(4);
+    $(document).on('screenSwipeLeft', function() {
+    	cal.gotoNextMonth( updateMonthYear );
+    });
+    $(document).on('screenSwipeRight', function() {
+    	cal.gotoPreviousMonth( updateMonthYear );
+    });
+
+    var today = new Date();
+    updateTabloid(getSmena(today.getFullYear(), today.getMonth(), 1));
 
 }());

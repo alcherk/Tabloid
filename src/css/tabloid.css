@@ -1,13 +1,39 @@
 @charset 'UTF-8';
 
 .tabloid-cell-rest {
-	background-color: #2ecc71 !important;
+	background-color: #FF3C00 !important;
 }
 
 .tabloid-cell1 {
-	background-color: #f1c40f !important;
+	background-color: #BADAF5 !important;
 }
 
 .tabloid-cell2 {
-	background-color: #e67e22 !important;
+	background-color: #FFDD00 !important;
+}
+
+.legend {
+	height: 55px;
+	padding: 20px;
+}
+
+.legend-row {
+	text-align: center;
+	display: table;
+	height: 100%;
+}
+
+.legend-cell {
+	width: 75px; 
+	height: 55px;
+	font-style: bold;
+	font-size: 200%;
+	text-align: center; 
+	display: table-cell; 
+	vertical-align: middle;
+	margin-left: 10px;
+}
+.legend-cell-space {
+	width: 15px;
+	height: 100%;
 }

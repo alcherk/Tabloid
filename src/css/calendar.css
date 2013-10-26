@@ -86,10 +86,10 @@
 
 .fc-calendar .fc-row > div > span.fc-date {
 	position: absolute;
-	width: 30px;
-	height: 20px;
-	font-size: 20px;
-	line-height: 20px;
+	width: 50px;
+	height: 40px;
+	font-size: 40px;
+	line-height: 40px;
 	font-weight: 700;
 	color: #ddd;
 	text-shadow: 0 -1px 0 rgba(255,255,255,0.8);
