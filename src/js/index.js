@@ -34,20 +34,7 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        $('#swipe').bind('swipeleft', function(e) {
-            $.event.trigger({
-                type: "screenSwipeLeft",
-                message: e.message,
-                time: new Date()
-            });
-        });
-        $('#swipe').bind('swiperight', function(e) {
-            $.event.trigger({
-                type: "screenSwipeRight",
-                message: e.message,
-                time: new Date()
-            });
-        });
+        document.addEventListener("resume", function() { $(document).trigger('appResumed', [1]); }, false);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {

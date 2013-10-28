@@ -86,16 +86,15 @@
 
 .fc-calendar .fc-row > div > span.fc-date {
 	position: absolute;
-	width: 50px;
 	height: 40px;
-	font-size: 40px;
-	line-height: 40px;
+	font-size: 50px;
+	line-height: 20px;
 	font-weight: 700;
 	color: #ddd;
 	text-shadow: 0 -1px 0 rgba(255,255,255,0.8);
 	bottom: 5px;
 	right: 5px;
-	text-align: right;
+	text-align: center;
 }
 
 .fc-calendar .fc-row > div > span.fc-weekday {
