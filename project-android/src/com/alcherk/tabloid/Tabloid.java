@@ -22,15 +22,16 @@ package com.alcherk.tabloid;
 import android.os.Bundle;
 import org.apache.cordova.*;
 
-public class Tabloid extends DroidGap
+public class tabloid extends CordovaActivity 
 {
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        super.init();
         // Set by <content src="index.html" /> in config.xml
-        //super.loadUrl(Config.getStartUrl());
-        super.loadUrl("file:///assets/www/src/index.html");
+        super.loadUrl(Config.getStartUrl());
+        //super.loadUrl("file:///android_asset/www/src/index.html");
     }
 }
 

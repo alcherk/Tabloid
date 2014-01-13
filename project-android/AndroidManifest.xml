@@ -27,17 +27,13 @@
         android:resizeable="true"
         android:anyDensity="true"
         />
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.INTERNET" />   
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application android:icon="@drawable/icon" android:label="@string/app_name"
         android:hardwareAccelerated="true"
         android:debuggable="true">
-        <activity android:name="Tabloid" android:label="@string/app_name"
+        <activity android:name="tabloid" android:label="@string/app_name"
                 android:theme="@android:style/Theme.Black.NoTitleBar"
                 android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale">
             <intent-filter>
@@ -47,5 +43,5 @@
         </activity>
     </application>
 
-    <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="17"/>
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="19"/>
 </manifest> 

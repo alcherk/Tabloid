@@ -3,6 +3,8 @@
 	// $.mobile.defaultDialogTransition = 'none';
 	// $.mobile.buttonMarkup.hoverDelay = 0;
 
+	$.mobile.loadingMessage = false;
+
 	var tabloid = [1, 1, 0, 0, 2, 2, 0, 0],
 		startDate = new Date(2012, 4, 1, 10), // May 01, 2012 (month starts from 0)
 		secondsInDay = 60 * 60 * 24;
